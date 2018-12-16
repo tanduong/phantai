@@ -33,7 +33,7 @@ const NavContact = () => {
         <a href="/"><img src={imageSrc[1].mail} alt={imageSrc[1].mail}/>taicnit@email.com</a>
       </li>
       <li>
-        <a href="/"><img src={imageSrc[2].url} alt={imageSrc[2].alt}/>www.phantai.herukuapp.com</a>
+        <a href="/"><img src={imageSrc[2].url} alt={imageSrc[2].alt}/>www.phantai.herokuapp.com</a>
       </li>
       <li>
         <a href="/"><img src={imageSrc[3].location} alt={imageSrc[3].alt}/>Ho Chi Minh City</a>
