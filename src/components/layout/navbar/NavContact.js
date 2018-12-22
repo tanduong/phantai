@@ -1,45 +1,43 @@
 import React from 'react';
 
-
 const imageSrc = [
   {
-    phone: './img/phone.png',
-    alt: 'phone'
+    img: './img/phone.png',
+    info: '+84 919 664 350',
+    alt: 'phone',
   },
   {
-    mail: './img/mail.png',
-    alt: 'mail'
+    img: './img/mail.png',
+    info: 'taicnit@email.com',
+    alt: 'mail',
   },
   {
-    url: './img/url.png',
-    alt: 'url'
+    img: './img/url.png',
+    info: 'www.phantai.herokuapp.com',
+    alt: 'url',
   },
   {
-    location: './img/location.png',
-    alt: 'location'
+    img: './img/location.png',
+    info: 'Ho Chi Minh City',
+    alt: 'location',
   },
-]
-
+];
 
 const NavContact = () => {
   return (
     <div className="g-item">
       <h3>Gallery & Contact</h3>
       <ul className="contact-details">
-      <li>
-        <a href="/"><img src={imageSrc[0].phone} alt={imageSrc[0].alt}/>+84 919 664 350</a>
-      </li>
-      <li>
-        <a href="/"><img src={imageSrc[1].mail} alt={imageSrc[1].mail}/>taicnit@email.com</a>
-      </li>
-      <li>
-        <a href="/"><img src={imageSrc[2].url} alt={imageSrc[2].alt}/>www.phantai.herokuapp.com</a>
-      </li>
-      <li>
-        <a href="/"><img src={imageSrc[3].location} alt={imageSrc[3].alt}/>Ho Chi Minh City</a>
-      </li>
-    </ul>
-  </div>
-  )
-}
+        {imageSrc.map(({img, alt, info}, index) => (
+          <li key={index}>
+            <a href="/">
+              <img src={img} alt={alt} />
+              {info}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 export default NavContact;
